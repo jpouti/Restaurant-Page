@@ -1,0 +1,76 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* background styling */
+
+#content {
+    background-image: url('./img/burger.jpg'); 
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* header */
+
+#headerContainer {
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.buttonsContainer {
+    display: flex;
+    gap: 2.5vw;
+}
+
+.buttonsContainer > button {
+    font-size: 1.5rem;
+}
+
+/* headline */
+
+#headlineContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25vh;
+}
+
+#headlineContainer p{
+    font-size: 1rem;
+}
+
+/* footer */
+
+#footerContainer {
+    max-height: 5vh;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
