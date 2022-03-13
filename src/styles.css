@@ -14,12 +14,13 @@ body {
     font-weight: bold;
 }
 
-/* background styling */
+/* --- MAIN PAGE --- */
+/* background for home page */
 
-#content {
+#content.home {
     background-image: url('./img/burger.jpg'); 
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
     background-position: center;
     background-size: cover;
     display: flex;
@@ -56,9 +57,14 @@ body {
     margin-bottom: 25vh;
 }
 
+#headlineContainer h3{
+    text-align: center;
+}
+
 #headlineContainer p{
     font-size: 1rem;
 }
+
 
 /* footer */
 
@@ -72,5 +78,25 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* --- MENU --- */
+/* background for menu page */
 
+#content.menu {
+    background-image: url('./img/menu.jpg'); 
+    width: 100vw;
+    height: 100vh; 
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#itemContainer {
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 65vh;
+    align-items: center;
+}
 

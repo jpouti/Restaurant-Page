@@ -1,15 +1,15 @@
 import './styles.css';
-// import img from './img/burger.jpg';
+import img from './img/burger.jpg';
 
 const createMain = (() => {
 
-/*    
+   /* 
     const backgroundImg = () => {
         console.log("background");
         const divContent = document.querySelector('#content');
-        divContent.backgroundImage = img;
+        divContent.style.backgroundImage = "url('./img/burger.jpg')";
         console.log("set");
-    }        */
+    } */
     
     // create elements for header
     const headerElements = () => {
@@ -75,6 +75,7 @@ const createMain = (() => {
         imageCredit.id = "imageCredit";
         imageCredit.textContent = "Background image https://unsplash.com/photos/8l8Yl2ruUsg";
         footerContainer.appendChild(imageCredit);
+        return footerContainer;
     }
 
 return {headerElements, headlineElement, pageFooter};
