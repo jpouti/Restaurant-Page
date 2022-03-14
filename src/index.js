@@ -43,10 +43,7 @@ function createMenuPage() {
     divContent.appendChild(header);
     const menu = createMenu.menuItem();
     divContent.appendChild(menu);
-    const menuFood = createMenu.foodMenu();
-    divContent.appendChild(menuFood);
-    const menuDrinks = createMenu.drinksMenu();
-    divContent.appendChild(menuDrinks);
+    addMenuContent(4, 3);
     createMain.pageFooter();
 }
 
@@ -55,4 +52,20 @@ function clearContent() {
     while (divContent.firstChild) {
         divContent.firstChild.remove();
     }
+}
+
+// Input the content for restaurant menu
+// Add number of foods & drinks wanted as parameter
+function addMenuContent(food, drink) {
+    const menuFood = createMenu.foodMenu(food);
+    divContent.appendChild(menuFood);
+    const menuDrinks = createMenu.drinksMenu(drink);
+    divContent.appendChild(menuDrinks);
+    createMenu.addFoods(0, "CHEESEBURGER", "beef, onion, lettuce, cheese");
+    createMenu.addFoods(1, "BEEF BURGER", "Basic Burger");
+    createMenu.addFoods(2, "CHICKEN BURGER", "Basic Burger");
+    createMenu.addFoods(3, "HALLOUMI BURGER", "Basic Burger");
+    createMenu.addDrinks(0, "BEER");
+    createMenu.addDrinks(1, "SOFT DRINKS");
+    createMenu.addDrinks(2, "MILKSHAKE");
 }

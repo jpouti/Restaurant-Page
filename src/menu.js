@@ -10,35 +10,53 @@ const createMenu = (() => {
 
         return menuContainer;
     }
-    const foodMenu = () => {
+    const foodMenu = (numbers) => {
         const menuContainer = document.getElementById('itemContainer');
         const foodContainer = document.createElement('div');
+        const foodHeader = document.createElement('h1');
+        foodHeader.textContent = "BURGERS";
         foodContainer.id = 'foodContainer';
-        foodContainer.textContent = "Foods";
-        for (let index = 0; index < 4; index++) {
-            let foodCard = document.createElement('div');
-            foodCard.id = 'foodCard';
-            foodCard.setAttribute('data-id', index); 
-            foodContainer.appendChild(foodCard);
+        foodContainer.appendChild(foodHeader);
+        for (let index = 0; index < numbers; index++) {
+            let foodElement = document.createElement('h3');
+            foodElement.id = "foodElement" + index;
+            let foodText = document.createElement('p');
+            foodText.id = "foodText" + index;
+            foodContainer.appendChild(foodElement);
+            foodContainer.appendChild(foodText);
         }
         menuContainer.appendChild(foodContainer);
         return menuContainer;
     }
-    const drinksMenu = () => {
+    const drinksMenu = (numbers) => {
         const menuContainer = document.getElementById('itemContainer');
         const drinkContainer = document.createElement('div');
         drinkContainer.id = 'drinkContainer';
-        drinkContainer.textContent = "Drinks";
+        const foodHeader = document.createElement('h1');
+        foodHeader.textContent = "BEVERAGES";
+        drinkContainer.appendChild(foodHeader);
         for (let index = 0; index < 4; index++) {
-            let drinkCard = document.createElement('div');
-            drinkCard.id = 'drinkCard';
-            drinkCard.setAttribute('data-id', index); 
-            drinkContainer.appendChild(drinkCard);
+            let drinkElement = document.createElement('h3');
+            drinkElement.id = "drinkElement" + index;
+            let drinkText = document.createElement('p');
+            drinkText.id = "drinkText" + index;
+            drinkContainer.appendChild(drinkElement);
+            drinkContainer.appendChild(drinkText);
         }
         menuContainer.appendChild(drinkContainer);
         return menuContainer;
     }
-    return {menuItem, foodMenu, drinksMenu};
+    const addFoods = (index, name, text) => {
+        const foodName = document.getElementById('foodElement'+index);
+        foodName.textContent = name;
+        const foodText = document.getElementById('foodText'+index);
+        foodText.textContent = text;
+    }
+    const addDrinks = (index, name) => {
+        const drinkName = document.getElementById('drinkElement'+index);
+        drinkName.textContent = name;
+    }
+    return {menuItem, foodMenu, drinksMenu, addFoods, addDrinks};
 
 })();
 
