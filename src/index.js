@@ -1,5 +1,6 @@
 import {createMain} from './mainPage';
 import {createMenu} from './menu';
+import {contacts} from './contacts';
 
 console.log('load header');
 
@@ -25,8 +26,11 @@ document.querySelectorAll('button').forEach(tabs => {
             clearContent();
             createMenuPage();
         } else {
-            //divContent.className = "contacts";
+            divContent.className = "contacts";
             console.log("Change to contacts");
+            clearContent();
+            divContent.appendChild(header);
+            divContent.appendChild(contacts.hours());
         }
     });
 });
@@ -43,7 +47,7 @@ function createMenuPage() {
     divContent.appendChild(header);
     const menu = createMenu.menuItem();
     divContent.appendChild(menu);
-    addMenuContent(4, 3);
+    addMenuContent(4, 3, 3);
     createMain.pageFooter();
 }
 
@@ -55,17 +59,22 @@ function clearContent() {
 }
 
 // Input the content for restaurant menu
-// Add number of foods & drinks wanted as parameter
-function addMenuContent(food, drink) {
-    const menuFood = createMenu.foodMenu(food);
-    divContent.appendChild(menuFood);
-    const menuDrinks = createMenu.drinksMenu(drink);
+// Add number of foods & drinks & appetizers wanted as parameter
+function addMenuContent(burgers, beverages, appetizers) {
+    const menuBurgers = createMenu.foodMenu(burgers, 'burgers');
+    divContent.appendChild(menuBurgers);
+    const menuDrinks = createMenu.foodMenu(beverages, 'beverages');
     divContent.appendChild(menuDrinks);
-    createMenu.addFoods(0, "CHEESEBURGER", "beef, onion, lettuce, cheese");
-    createMenu.addFoods(1, "BEEF BURGER", "Basic Burger");
-    createMenu.addFoods(2, "CHICKEN BURGER", "Basic Burger");
-    createMenu.addFoods(3, "HALLOUMI BURGER", "Basic Burger");
-    createMenu.addDrinks(0, "BEER");
-    createMenu.addDrinks(1, "SOFT DRINKS");
-    createMenu.addDrinks(2, "MILKSHAKE");
+    const menuAppetizers = createMenu.foodMenu(appetizers, 'appetizers');
+    divContent.appendChild(menuAppetizers);
+    createMenu.addFoods(0, "CHEESEBURGER", "beef, onion, lettuce, cheese", 10);
+    createMenu.addFoods(1, "BEEF BURGER", "Basic Burger", 10);
+    createMenu.addFoods(2, "CHICKEN BURGER", "Basic Burger", 10);
+    createMenu.addFoods(3, "HALLOUMI BURGER", "Basic Burger", 15);
+    createMenu.addDrinks(0, "BEER", 7);
+    createMenu.addDrinks(1, "SOFT DRINKS", 7);
+    createMenu.addDrinks(2, "MILKSHAKE", 7);
+    createMenu.addAppetizers(0, "FRENCH FRIES", 5);
+    createMenu.addAppetizers(1, "CHICKEN WINGS", 7);
+    createMenu.addAppetizers(2, "ONION RINGS", 5);
 }
