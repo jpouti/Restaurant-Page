@@ -38,7 +38,8 @@ document.querySelectorAll('button').forEach(tabs => {
 function createMainPage() {
     divContent.appendChild(header);
     createMain.headlineElement();
-    createMain.pageFooter();
+    createMain.pageFooter("https://unsplash.com/@jonathanborba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        "Jonathan Borba", "https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Unsplash");
 }
 
 //displaying the menu
@@ -47,7 +48,8 @@ function createMenuPage() {
     const menu = createMenu.menuItem();
     divContent.appendChild(menu);
     addMenuContent(4, 3, 3);
-    createMain.pageFooter();
+    createMain.pageFooter("https://unsplash.com/@slashiophotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", 
+        "Slashio Photography", "https://unsplash.com/@slashiophotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Unsplash");
 }
 
 // clearing all of the elements
@@ -64,7 +66,8 @@ function createContacts() {
     divContent.appendChild(contacts.some());
     contacts.changeHours("saturday", "10am to 11pm"); 
     contacts.changeHours("sunday", "11am to 8pm");
-    createMain.pageFooter();
+    createMain.pageFooter("https://unsplash.com/@joshduke10?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+    "Josh Duke", "https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Unsplash");
 }
 
 // Input the content for restaurant menu

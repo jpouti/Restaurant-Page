@@ -1,5 +1,3 @@
-// background img https://unsplash.com/photos/plwBDw9x5cE by Slashio Photography
-
 import './styles.css';
 
 const createMenu = (() => {
