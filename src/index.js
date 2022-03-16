@@ -29,8 +29,7 @@ document.querySelectorAll('button').forEach(tabs => {
             divContent.className = "contacts";
             console.log("Change to contacts");
             clearContent();
-            divContent.appendChild(header);
-            divContent.appendChild(contacts.hours());
+            createContacts();
         }
     });
 });
@@ -56,6 +55,16 @@ function clearContent() {
     while (divContent.firstChild) {
         divContent.firstChild.remove();
     }
+}
+
+//display the contacts page
+function createContacts() {
+    divContent.appendChild(header);
+    divContent.appendChild(contacts.hours());
+    divContent.appendChild(contacts.some());
+    contacts.changeHours("saturday", "10am to 11pm"); 
+    contacts.changeHours("sunday", "11am to 8pm");
+    createMain.pageFooter();
 }
 
 // Input the content for restaurant menu

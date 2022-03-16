@@ -95,14 +95,29 @@ body {
 #itemContainer {
     font-size: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 33vw 35vw 27vw;
+    grid-template-rows: 15vh auto;
     text-align: center;
-    margin-bottom: 35vh;
     padding: 1vh 2.5vw;
 }
 
-#itemContainer #foodContainer {
-    grid-row-start: 1;
+#itemContainer h2 {
+    grid-column-start: 2;
+}
+
+#itemContainer #burgersContainer {
+    grid-row-start: 2;
+    grid-column-start: 1;
+}
+
+#itemContainer #beveragesContainer {
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+#itemContainer #appetizersContainer {
+    margin-top: 10vh;
+    grid-row-start: 3;
     grid-column-start: 1;
 }
 
@@ -114,6 +129,97 @@ body {
 }
 
 #itemContainer h3{
+    margin-top: 2.5vh;
+}
+
+/* --- CONTACTS ---*/
+#content.contacts {
+    background-image: url('./img/contacts.jpg');
+    width: 100vw;
+    height: 100vh; 
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infoContainer {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: 1rem;
+    margin: 5vh 2.5vw;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: 5vw auto;
+    grid-template-rows: 5vh 5vh 5vh;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.infoGrid p{
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+#locationSymbol {
+    background-image: url('./img/map-marker.png');
+    background-repeat: no-repeat;
+}
+
+#phoneSymbol {
+    background-image: url('./img/phone-in-talk.png');
+    background-repeat: no-repeat;
+}
+
+#emailSymbol {
+    background-image: url('./img/email.png');
+    background-repeat: no-repeat;
+}
+
+.hoursContainer {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 1vh 1vw;
+    background-color: rgba(247, 245, 245, 0.3);
+}
+
+.hoursContainer > div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    gap: 2vh;
     margin-top: 1vh;
 }
 
+.someContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25vh;
+    color: black;
+    font-size: 1.35rem;
+    gap: 2.5vh;
+}
+
+.someContainer p{
+    background-color: rgba(247, 245, 245, 0.3);
+}
+
+.linkContainer {
+    display: flex;
+    gap: 5vw;
+}
+
+.linkContainer > button {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 2.5vh 1vw;
+    background-color: rgba(247, 245, 245, 0.3);
+    border: solid 2px black;
+    border-radius: 6px;
+}
