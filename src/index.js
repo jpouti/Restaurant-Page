@@ -66,8 +66,8 @@ function createContacts() {
     divContent.appendChild(contacts.some());
     contacts.changeHours("saturday", "10am to 11pm"); 
     contacts.changeHours("sunday", "11am to 8pm");
-    createMain.pageFooter("https://unsplash.com/@joshduke10?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
-    "Josh Duke", "https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Unsplash");
+    createMain.pageFooter("https://unsplash.com/@louishansel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText",
+        "Louis Hansel", "https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText", "Unsplash");
 }
 
 // Input the content for restaurant menu
@@ -89,4 +89,4 @@ function addMenuContent(burgers, beverages, appetizers) {
     createMenu.addAppetizers(0, "FRENCH FRIES", 5);
     createMenu.addAppetizers(1, "CHICKEN WINGS", 7);
     createMenu.addAppetizers(2, "ONION RINGS", 5);
-}
+} 
